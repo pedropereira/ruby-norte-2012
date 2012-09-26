@@ -1,9 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
-  <title>RubyNorte2012</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Ruby Norte 2012">
+  <meta name="author" content="Group Buddies">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+  <title>Ruby Norte 2012</title>
+
+  <%= favicon_link_tag "/favicon.ico" %>
+
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "application", :async => "true" %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
