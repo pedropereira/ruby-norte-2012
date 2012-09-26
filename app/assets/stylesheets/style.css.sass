@@ -7,66 +7,80 @@ body
 
 .wrapper
   margin: auto
-  width: 960px
+  width: 75.89% // 960px @ 1280px
 
 
-#top-bar
+#event-info
   background-color: rgba(0, 0, 0, 0.2)
   color: $faded-yellow
-  font-family: 'League Gothic'
-  font-size: 1.3em
-  padding: 12px 0 10px
-  text-transform: uppercase
+  font-family: $league-gothic-font-stack
+  font-size: 2.1rem
   letter-spacing: 1px
+  padding-bottom: 1rem
+  padding-top: 1.2rem
+  text-transform: uppercase
 
   #location
     float: right
 
 
-header
+#header
   background-color: $dark-red
   background-image: image-url('separator.png'), image-url('bg.png')
   background-position: bottom, center
   background-repeat: repeat-x, repeat
-  padding-bottom: 80px
+  padding-bottom: 8rem
 
   #gold-wreath
     display: block
-    margin: 50px auto 20px
+    margin: 5rem auto 0
 
   h1
     color: $golden-yellow
-    font-family: 'Quattrocento', 'Cambria', 'Times New Roman'
-    font-size: 2.3em
+    font-family: $quattrocento-font-stack
+    font-size: 3.7rem
     letter-spacing: -1px
-    padding-bottom: 35px
+    margin: 2rem auto
     text-align: center
     text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2)
     text-transform: uppercase
 
-  #description
+  p
     color: $faded-yellow
-    font-family: Verdana
-    font-size: 1em
-    line-height: 1.2em
-    margin: 0 auto 40px
-    width: 500px
+    font-size: 1.6rem
+    line-height: 2.2rem
+    margin: 4rem auto
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2)
+    width: 50rem
 
   button
     background-color: $dark-red
-    border: 8px solid rgba(0, 0, 0, 0.3)
-    border-radius: 8px
+    border: 1px solid rgba(0, 0, 0, 0.3)
     color: $golden-yellow
+    cursor: pointer
     display: block
-    font-size: 1.1em
+    font-size: 2rem
+    line-height: 1.4rem
     margin: auto
-    padding: 12px 20px
+    padding: 2rem 3.5rem
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3)
+    @include background-image(linear-gradient(top, $dark-red - 10, $dark-red - 25))
+    @include border-radius(5px)
+    @include box-shadow(inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.1))
+
+  button:hover
+    @include background-image(linear-gradient(top, $dark-red - 5, $dark-red - 20))
+
+  button:active
+    text-shadow: none
+    @include box-shadow(inset 0 1px 4px rgba(0, 0, 0, 0.4))
 
 
 #main-content
   height: 800px
 
 
-footer
-  padding: 30px 0
+#footer
+  font-family: $quattrocento-font-stack
+  padding: 3rem 0
   text-align: center
